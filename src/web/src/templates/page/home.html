@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>${title}</title>
+    @css 'src/templates/page/home.css'
+  </head>
+  <body>
+    <h1 class="title">Hello, Vs.</h1>
+    @for repo in my_repos
+    <div>
+      <a href="${repo_url}">${repo.title}</a>
+      <span>${repo.description}</span>
+    </div>
+    @end
+    <div>@include 'component.html'</div>
+  </body>
+</html>
